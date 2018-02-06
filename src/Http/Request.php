@@ -24,6 +24,10 @@ class Request extends BaseRequest
             }
         }
 
-        return $this->files[$key] ?: null;
+        if (!isset($this->files[$key])) {
+            return null;
+        }
+
+        return $this->files[$key];
     }
 }
