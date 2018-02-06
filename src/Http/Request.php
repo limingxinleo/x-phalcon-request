@@ -24,6 +24,6 @@ class Request extends BaseRequest
             }
         }
 
-        return $this->files[$key];
+        return $this->files[$key] ?: null;
     }
 }
